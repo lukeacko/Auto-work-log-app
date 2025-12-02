@@ -27,6 +27,7 @@
     <li>Sort columns directly in the logs table</li>
     <li>Export logs to CSV</li>
     <li>Manage technicians (add new technicians and delete)</li>
+    <li>Logs, technician data and vehicle data are all stored in a Firebase Cloudflare database, there is also a more basic local version that uses SQL</li>
 </ul>
 
 <h2>📸 Screenshots</h2>
