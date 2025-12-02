@@ -2,4 +2,4 @@ __pycache__/
 *.pyc
 worklogs.db
 *.sqlite
-serviceAccount.jsom
+serviceAccount.json
