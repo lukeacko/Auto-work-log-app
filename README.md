@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h1>🛠️ Automotive Work Log App (Firestore)</h1>
+<h1>🛠️ Auto Work Log App (Firestore)</h1>
 
 <p>A Python desktop application for managing automotive work logs with Firestore. Track jobs, technicians, status, and dates with a simple, user-friendly interface.</p>
 
