@@ -38,7 +38,7 @@
 <img src="screenshots/view_logs.png" alt="View Logs" class="screenshot">
 
 <p><strong>Manage Technicians:</strong></p>
-<img src="screenshots/manage technicians.png" alt="View Logs" class="screenshot">
+<img src="screenshots/manage_technicians.png" alt="View Logs" class="screenshot">
 <h2>⚡ Quick Start</h2>
 <ol>
     <li>
