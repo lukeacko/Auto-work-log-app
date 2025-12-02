@@ -23,6 +23,7 @@
             <li>Date</li>
         </ul>
     </li>
+    <li>Data handling - VINs must be 17 alphanumeric characters & Job number must be a 5 digit number
     <li>Filter and search logs by any field</li>
     <li>Sort columns directly in the logs table</li>
     <li>Export logs to CSV</li>
