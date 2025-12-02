@@ -43,7 +43,7 @@
 <ol>
     <li>
         <strong>Clone the repo</strong>
-        <pre>git clone https://github.com/yourusername/automotive-work-log-app.git
+        <pre>git clone https://github.com/lukeacko/automotive-work-log-app.git
 cd automotive-work-log-app</pre>
     </li>
     <li>
@@ -71,6 +71,16 @@ cd automotive-work-log-app</pre>
     <li><strong>Edit a job:</strong> Double-click a row or select → <code>Edit Selected</code></li>
     <li><strong>Delete a job:</strong> Select a row → <code>Delete Selected</code></li>
     <li><strong>Export CSV:</strong> Click <code>Export CSV</code> in logs view</li>
+</ul>
+
+<h2>📈 Roadmap</h2>
+<ul>
+    <li>🔹 Add multi-user login with role permissions (admin/technician)</li>
+    <li>🔹 Implement job history tracking / audit log</li>
+    <li>🔹 Add reporting (e.g., monthly completed jobs, technician workload)</li>
+    <li>🔹 Enhance search with partial matches and date ranges</li>
+    <li>🔹 Add notifications for pending/in-progress jobs</li>
+    <li>🔹 Improve UI styling and themes</li>
 </ul>
 
 <h2>⚙️ Requirements</h2>
