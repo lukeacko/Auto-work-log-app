@@ -1,112 +1,122 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
+# Auto Work Log 🛠️
 
-<h1>🛠️ Auto Work Log App (Firestore)</h1>
+A Python desktop application for managing automotive workshop jobs, vehicles, and technician assignments.
 
-<p>A Python desktop application for managing automotive work logs with Firestore. Track jobs, technicians, status, and dates with a simple, user-friendly interface.</p>
+I built the project around a workflow I understood from the automotive industry, with two storage implementations: a local SQLite version and a cloud-backed Firebase/Firestore version.
 
-<h2>🚀 Features</h2>
-<ul>
-    <li>Add, edit, delete work logs</li>
-    <li>Track:
-        <ul>
-            <li>Job Number</li>
-            <li>Technician</li>
-            <li>Status (Pending / In Progress / Complete)</li>
-            <li>Description</li>
-            <li>Date</li>
-            <li>Vehicle make & model
-        </ul>
-    </li>
-    <li>Filter and search logs by any field</li>
-    <li>Sort columns directly in the logs table</li>
-    <li>Export logs to CSV</li>
-    <li>Manage technicians (add new technicians and delete)</li>
-    <li>Logs, technician data and vehicle data are all stored in a Firebase Cloudflare database, there is also a more basic local version that uses SQL</li>
-</ul>
+## Screenshots
 
-<h2>📸 Screenshots</h2>
-<p><strong>Main Form:</strong></p>
-<img src="screenshots/main_form.png" alt="Main Form" class="screenshot">
+### Main job form
+![Main form](screenshots/main_form.png)
 
-<p><strong>View Logs and manage them:</strong></p>
-<img src="screenshots/view_logs.png" alt="View Logs" class="screenshot">
+### Job log viewer
+![Job logs](screenshots/view_logs.png)
 
-<p><strong>Manage Technicians:</strong></p>
-<img src="screenshots/manage_technicians.png" alt="View Logs" class="screenshot">
+### Technician management
+![Manage technicians](screenshots/manage_technicians.png)
 
-<p><strong>Manage Vehicles:</strong></p>
-<img src="screenshots/add_vehicle_sucsess.png" alt="View Logs" class="screenshot">
+### Vehicle management
+![Add vehicle](screenshots/add_vehicle_sucsess.png)
 
-<h2>⚡ Quick Start</h2>
-<ol>
-    <li>
-        <strong>Clone the repo</strong>
-        <pre>git clone https://github.com/lukeacko/automotive-work-log-app.git
-cd automotive-work-log-app</pre>
-    </li>
-    <li>
-        <strong>Install dependencies</strong>
-        <pre>pip install tk tkcalendar firebase-admin</pre>
-    </li>
-    <li>
-        <strong>Configure Firebase</strong>
-        <ul>
-            <li>Create a Firebase project and enable Firestore</li>
-            <li>Generate a service account JSON file</li>
-            <li>Save it as <code>serviceAccount.json</code> in the project folder</li>
-        </ul>
-    </li>
-    <li>
-        <strong>Run the app</strong>
-        <pre>python main_firestore.py</pre>
-    </li>
-</ol>
+## Features
 
-<h2>📝 Usage</h2>
-<ul>
-    <li><strong>Add a job:</strong> Fill all fields → <code>Save Entry</code></li>
-    <li><strong>View logs:</strong> Click <code>View Job Logs</code> → filter or sort → <code>Search</code></li>
-    <li><strong>Edit a job:</strong> Double-click a row or select → <code>Edit Selected</code></li>
-    <li><strong>Delete a job:</strong> Select a row → <code>Delete Selected</code></li>
-    <li><strong>Export CSV:</strong> Click <code>Export CSV</code> in logs view</li>
-</ul>
+### Firestore version (`main.py`)
 
-<h2>📈 Roadmap</h2>
-<ul>
-    <li>🔹 Add multi-user login with role permissions (admin/technician)</li>
-    <li>🔹 Implement job history tracking / audit log</li>
-    <li>🔹 Add reporting (e.g., monthly completed jobs, technician workload)</li>
-    <li>🔹 Enhance search with partial matches and date ranges</li>
-    <li>🔹 Add notifications for pending/in-progress jobs</li>
-    <li>🔹 Improve UI styling and themes</li>
-</ul>
+- Create workshop jobs and assign them to technicians
+- Manage vehicle records
+- Manage technician records
+- Track job status: Pending, In Progress, or Complete
+- Edit and delete existing jobs
+- View job history in a table
+- Export displayed jobs to CSV
+- Store jobs, vehicles, and technicians in Firebase Firestore
 
-<h2>⚙️ Requirements</h2>
-<ul>
-    <li>Python 3.10+</li>
-    <li>Tkinter</li>
-    <li>tkcalendar</li>
-    <li>Firebase Admin SDK</li>
-</ul>
+### Local SQLite version (`main_sql.py`)
 
-<h2>🛠️ Project Structure</h2>
-<pre>
-/automotive-work-log-app
-│
-├─ main_firestore.py       # Main application
-├─ serviceAccount.json    # Firebase credentials
-├─ README.md              # This file
-└─ screenshots/           # Screenshots of application
-</pre>
+- Local SQLite database setup
+- Create, edit, and delete work-log entries
+- Technician management
+- Search/filter job records
+- Sort table columns
+- CSV import and export
+- Input validation for job numbers and VINs
 
-<h2>📄 License</h2>
-<p>MIT License</p>
+## Tech stack
 
-</body>
-</html>
+- Python
+- Tkinter / ttk
+- SQLite
+- Firebase Admin SDK / Firestore
+- tkcalendar
+- CSV import/export
+
+## Project structure
+
+```text
+Auto-work-log-app/
+├── main.py             # Firebase / Firestore version
+├── main_sql.py         # Local SQLite version
+├── requirements.txt
+├── screenshots/
+└── README.md
+```
+
+## Installation
+
+```bash
+git clone https://github.com/lukeacko/Auto-work-log-app.git
+cd Auto-work-log-app
+python -m venv .venv
+```
+
+Activate the virtual environment, then install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+> Tkinter ships with standard Python on Windows and macOS. Some Linux distributions require the OS package for Tkinter to be installed separately.
+
+## Run the local SQLite version
+
+The quickest way to try the project is the local version:
+
+```bash
+python main_sql.py
+```
+
+The application creates `worklogs.db` locally. The database file is excluded from Git.
+
+## Run the Firestore version
+
+1. Create a Firebase project and enable Firestore.
+2. Create a Firebase service-account key.
+3. Save the downloaded credential file as `serviceAccount.json` in the repository root.
+4. Run:
+
+```bash
+python main.py
+```
+
+**Never commit `serviceAccount.json` to Git.** It is included in `.gitignore`.
+
+## What I learned
+
+This project gave me practical experience taking a real workshop workflow and turning it into software. It involved GUI development, CRUD operations, database integration, validation, filtering, CSV handling, and maintaining both local and cloud-backed versions of the same idea.
+
+## Future improvements
+
+- Separate database logic from the Tkinter UI to improve testability
+- Add automated tests for validation and data-access functions
+- Improve Firestore job-number generation
+- Refresh management views automatically after database changes
+- Add user authentication and role-based permissions
+- Add reporting for technician workload and completed jobs
+
+## Security
+
+Firebase credentials are intentionally excluded from the repository. If a credential is ever committed accidentally, it should be revoked in Firebase immediately and removed from Git history before the repository is made public.
+
+## License
+
+MIT
