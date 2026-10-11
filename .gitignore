@@ -1,5 +1,10 @@
+.venv/
 __pycache__/
-*.pyc
+*.py[cod]
+.pytest_cache/
 worklogs.db
 *.sqlite
+*.sqlite3
 serviceAccount.json
+*.csv
+.DS_Store
