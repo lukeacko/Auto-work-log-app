@@ -1,0 +1,2 @@
+firebase-admin>=6.5
+tkcalendar>=1.6
